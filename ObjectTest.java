@@ -53,17 +53,11 @@ class MyObject /*extends Object 가 숨어있다*/{
 	}
 	@Override
 	//obj <--- o2(MyObject객체)
-	public boolean equals(Object obj/*obj는 Object 타입이다*/) {
+	public boolean equals(Object obj/*obj는 Object 타입이다*/) { //equals메소드는 불리언값을 출력으로 하기 때문에 불리언 타입을 넣는다.
 		
 		// 매개변수 타입이 마이오브젝트 타입이고 전달 문자열 동일하면 true
 		if(obj instanceof MyObject) {
-			// 변수 instanceof 클래스명 (앞의 변수가 뒤에 있는 클래스의 객체를 갖고 있는지 묻는 것)
-			/*return toString().equals(obj.toString()); 이문장으로 아래 세줄이 지워질수 있다.*/
-			String me = this.toString();
-			String other = obj.toString();
-			if(me.equals(other)) {
-				return true;
-			} else return false; //문자열 내용이 o1과 o2가 서로 다르다면 출력
+			return toString().equals(obj.toString());
 		} else return false; //MyObject 타입이 아니면 출력
 	}
 }
