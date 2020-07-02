@@ -36,6 +36,7 @@ public class ConnectionTest {
 			//2. sql 생성 - 저장
 /*			String insertSQL = "insert into board values(100, '제목1', '내용1', 'id5', sysdate, 1111, 0)";
  기본적인 sql 정보 입력 방법*/		
+			
 			String insertSQL = 
 					"insert into board values(?,?,?,?,sysdate,?,0)";
 			// 매번 입력해야 하는 명령이 아니라 그때그때 입력해서 더 쉽게 코딩이 가능하다 
