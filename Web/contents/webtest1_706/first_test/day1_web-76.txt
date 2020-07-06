@@ -1,0 +1,86 @@
+- java web
+
+-jsp 위주 
+
+html
+css
+javascript
+
+jsp
+
+
+<원래일정>
+6/2 - 6/19 java
+6/22 - 7/3 web 
+7/6 - 7/13 android
+
+<수정일정>
+6/2 - 7/7 java
+7/8 - 7/21 web 
+7/22 - 7/29 android
+
+
+<현재진행일정>
+6/2 - 7/5 java
+7/6 - 7/13 ()  - 다른 강사님 - 7/21 web 
+7/22 - 7/29 android
+
+text - 텍스트 넘어선 그 이상 것
+====> 문자, 이미지, 동영상, 음향, 링크 이동 
+markup : style(크기 색상 배치, 이미지...) - contents
+<p> 문단입니다 </p>
+<h1> 제목입니댜</h1>
+
+html - hyper text markup language
+tag  구성 + 컨텐츠 구성
+
+internet : network 를 networking
+17대컴퓨터 연결 + 옆강의장 + 4층 전체 + 건물 + 
+internet 다른 컴퓨터 연결 - world wide web(www) 
+web 프로토콜 -http - hyper text transfer protocol
+web 프로토콜 (http) 서버-클라이언트 데이터 - html 
+
+web server = http server
+1> web client 요청 허용 
+2> 요청 파악 
+3> 적합한 서비스 
+4> java 웹서버 툴
+5> tomcat 서버 
+
+web client = http client = 
+1> web server 요청 
+2> 요청 html파일 화면 출력 
+3> web browser - ie / chrome / firefox / safari / opera / .....
+
+web server / web client 
+http / html
+
+1> a.html파일 - 내컴퓨터 test/a.html
+--------------------------------------
+<h1> 제목입니다</h1>
+<p> 문장입니다 </p>
+---------------------------------------
+
+2> tomcat web server 설치 + eclipse 내부 등록 / - 시작
+
+3> web client = web browser
+웹서버 파일 요청 방식 --> http://서버ip:port/test/a.html
+url 
+http://localhost:8082/first/test.html
+
+
+4> web server first/test.html 파일 찾아서 클라이언트 전송
+
+5> web client 화면 a.html 파일 내용 실행 출력
+
+html5
+html
+
+
+
+html
+css
+javascript
+
+
+
