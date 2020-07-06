@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style> #third {color : red;}</style>  <!-- id=third 태그 글씨 빨강으로 변경하게 하는 문구 -->
+
+</head>
+<body>
+<!-- 테스트 표현 테그들 -->
+<h1 id = "here">제목1</h1>
+<h2>제목2</h2>
+<h3>제목3</h3> 
+<h4>제목4</h4>
+<h5>제목5</h5>
+<h6>제목6</h6>
+<p>본문입&nbsp;&nbsp;&nbsp;니데이<br>오늘은 <b>html</b> <i>공부를</i> 합니데이</p>
+<hr>
+<pre>
+프리합니데이 
+이게 뭔지 알아봅니데이 pre태그는 br 태그를 안써도 문서를 그대로 인용해서 적용합니데이.
+</pre>
+<hr>
+<p> &lt; &gt; </p>
+<hr>
+<p id="third"> 세번째 문단 </p>
+<hr>
+<img alt="파일이름을 확인하세요" src="html5.png" width="500px" height="500px"> 
+<!-- img : 이미지파일 지정 , alt = src의 파일이 검색이 안될시 나올 텍스트 
+	src는 정적인 확장자만 가능하다, :: jpg, png, ,,,,-->
+
+<hr>
+<h3>번호서식 리스트 출력</h3> 
+<ol type="1" start="2"> <!-- type : ol의 출력 타입 설정, start : 출력의 시작설정 -->
+<li>database</li>
+<li>java</li>
+<li>web</li>
+</ol>
+
+<h3>기호서식 리스트 출력</h3>
+<ul type="circle">
+<li>database</li>
+<li>java</li>
+<li>web</li>
+</ul>
+
+
+<hr>
+<!-- <a> : 텍스트 마우스 클릭 동작 - 다른 html 파일이나 html 파일의 다른 부분의 링크 이동
+파랑색 글씨 == 한번방문(이동) 방문기록 있다면 보라색으로 변경 -->
+<a href="http://localhost:8081/fisrt/NewFile.html"> NewFile.html로 이동 </a><br>
+<a href="http://www.kitri.re.kr"> 키트리 홈페이지로 이동</a><br>
+<a href="#here"> 현재 파일 가장 위 이동</a><br>
+
+<hr>
+<h3> 테이블 태그 </h3>
+<table border="3">
+<caption>테이블 제목</caption>
+<tr> <th>컬럼1 제목</th> <th> 컬럼2 제목 </th> <th> 컬럼3 제목 </th></tr>
+<tr> <td> 1행1열 </td><td> 1행2열 </td> <td> 1행3열 </td></tr>
+<tr> <td
+> 2행1열 </td><td> 2행2열 </td> <td> 2행3열 </td></tr> 
+</table>
+<!-- table : 표 생성
+	<tr> : 행 생성
+	<td> : 열 생성 
+	<th> : 컬럼 제목
+	<caption> : 테이블 제목
+	border : 외곽선 지정
+	
+	colspan : 행의 칸을 확장한다.
+	rowspan : 열의 칸을 확장한다. -->
+<h3> 테이블 태그-2 </h3>
+<table border="3">
+<caption>주소록</caption>
+<tr> <th> 이름 </th> <th> 주소 </th> <th> 전화 </th></tr>
+<tr> <td> 김사원 </td><td> 서울시 구로구 구로동 </td> <td> 017-1111-0210 </td></tr>
+<tr> <td> 박사원 </td><td> 부산시 해운대구 어딘가동 </td> <td> 018-4646-7777 </td></tr> 
+</table><br>
+
+<table border="3" width=300px>
+<caption>로그인 창</caption>
+<tr> <td> 아이디입력 </td><td> java </td> </tr>
+<tr> <td> 암호입력 </td><td> 1234 </td> </tr>
+<tr> <td colspan="2"> 로그인 버튼 </td> </tr> 
+</table><br>
+
+<table border="3" width=300px>
+<caption>로그인 창-2</caption>
+<tr> <td> 아이디입력 </td><td> java </td> <td rowspan="2"> 로그인 버튼 </td> </tr>
+<tr> <td> 암호입력 </td><td> 1234 </td> </tr> 
+</table><br>
+
+<!-- 사용자 입력 받는 법 == 입력양식태그 -->
+<!-- 
+	키보드 입력 : text / password
+	마우스클릭입력 : radio (name이 같은 선에 한해서 단일 선택만 가능)
+	name 은 변수저장과 같아서 아이디에 name="id" 를 쓰면 아이디에 입력된 값이 id에 저장됨을 의미한다.
+	아래의 gender도 같은 의미로 사용된 것이다/.
+	
+	마우스 클릭버튼 내장 : submit : form 태그에 버튼 생성하여 데이터 전송
+	마우스 클릭버튼  : reset : form 태그에 버튼 생성하여 초기화
+	마우스 버튼 : file : file을 찾아서 내용과 길이를 서버에 전송
+	
+	textarea : 텍스트를 여러줄 입력하는 것 : textarea rows="10"//10줄
+	select : 마우스 클릭으로 입력받는 것 : 미리 목록을 보여주지 않고 드롭다운형식으로 출력해서 보여준다.
+		보여줄 목록이 많을때 자주 사용된다.
+	<select> 
+	 <option> 첫번째 아이템 </option>
+	 <option> 두번째 아이템 </option>
+	  .
+	  .
+	  .
+	 </select>
+	-->
+	
+<!-- 2. form태그에 포함하여 구현하고 jsp로 데이터 전송 -->
+<form action="a.jsp">
+<!-- 1.브라우저에 입력 -->
+	<!-- action="input 태그 입력 4종류의 데이터를 서버로 전송하기 위한 파일 이름(*.jsp)" -->
+	아이디 입력 : <input type="text" name="id" value="아이디입력" size="10" maxlength="10" readonly="readonly"><br>
+												<!-- maxlenth : 글자수 제한, readonly : 한번입력된 문자 변경 불가 -->
+	암호 입력 : <input type="password" name="pw" size=12 maxlength="12"><br>
+	성별 : <input type="radio" name="gender" value="남자"> 남 <input type="radio" name="gender" value="femail"> 여<br>
+	취미 : <input type="checkbox" name="hobby" value="movie"> 영화
+	<input type="checkbox" name="hobby"> 음악
+	<input type="checkbox" name="hobby"> 독서
+	<input type="checkbox" name="hobby" checked="checked"> 운동 <br>
+									<!-- checked속성은 기본적으로 체크되어 있게 설정이 된다. -->
+	
+	<input type=file name="uploadfile"><br> <!-- 파일을 찾아서 파일과 내용까지 서버에 업로드 하는 버튼 -->
+	
+	<textarea rows="5" cols="50" name="contents"> </textarea><br>
+	<!-- 한번에 입력할 수 있는 글자=50 줄수=5줄 일 뿐이지 제한을 건 것을 아니다. -->
+	<select name="month" multiple="multiple"> <!-- multiple속성은 여러개를 선택 가능하게한다 -->
+		<option>1월</option>
+		<option>2월</option>
+		<option>3월</option>
+		<option>4월</option>
+		<option>5월</option>
+		<option>6월</option>
+		<option selected="selected">7월</option> <!-- 7월을 제일 먼저 보여주고 싶을때 설정 -->
+		<option>8월</option>
+		<option>9월</option>
+		<option>10월</option>
+		<option>11월</option>
+		<option>12월</option>
+	</select><br>
+	<input type="submit" value="전송"> <!-- 데이터 전송 버튼 생성-->
+	<input type="reset" value="지움"> <!-- 데이터 초기화 버튼 생성 -->
+	
+	
+	 
+</form>
+
+
+
+ <!-- HTML5 에서 추가된 태그 : 
+	멀티미디어 요소  -> <video>, <audio> 
+<video src="*.mp4 / avi"></video>
+<audio src="*.mp3"></audio>  -->
+
+<div id=" a  ssdd"> ,,,,,,</div>
+<span id='b'>,,,,,,,,,,,,</span>
+<span id=sss>,,,</span>
+<!-- <br> : 줄바꿈 
+	 <pre> : 인용 
+	 <b> : 굵게
+	 <del> : 삭제정의된 텍스트 표시
+	 <em> : 강조 
+	 <i> : 이텔릭체
+	 &nbsp; : 공백한칸
+	 &lt; : (lessthan) "<"
+	 &gt; : (greaterthan) ">" 
+	 공간분할태그 : <div>, <span>, <p>
+	 <hr> : 가로선
+	 <href : url 연결>-->
+
+</body>
+</html>

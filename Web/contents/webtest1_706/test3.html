@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="a.jsp">					<!-- form , table 태그 중요!!!!! -->
+색상선택 : <input type="color" ><br>
+숫자선택 : <input type="number"><br>
+날짜선택 : <input type="datetime-local"><br>
+폰번호입력 : <input type="tel"><br>
+이메일입력 : <input type="email"><br>
+<!-- 서버로 전송 : html4 이전 존재-->
+<input type="hidden" name="a" value="chrome"> <!-- 데이터 전송을 버튼이 보이지 않게끔 하는 설정 -->
+
+
+<input type="submit" value="전송버튼">
+<input type="reset" value="취소버튼">
+</form>
+<!-- 이미지 -->
+<img src="images/html5.png" alt="경로를 확인하시오"><br>
+
+<!-- 음향 -->
+<audio src="multimedia/old_pop.mp3" controls="controls"></audio><br>
+
+<!-- 동영상 -->
+<video src="multimedia/Gee.mp4" controls="controls"></video><br>
+<!-- controls : 동영상이나 오디오 태그를 조절할 수 있게 해주는 속성 
+	그리고 속성이 =값과 같으면 ㅅ생략 가능하다-->
+</body>
+</html>
