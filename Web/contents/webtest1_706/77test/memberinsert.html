@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title id=home>Insert title here</title>
+</head>
+<body>
+<form action="insert.jsp">
+아이디 입력 : <input type="text" id=id><br>
+암호 입력 : <input type="password" id=pw1 value="pw1"><br>
+암호2 입력 : <input type="password" id=pw2 value="pw2"><br>
+<input type="button" id=pwcheck value="암호확인"><br>
+<!-- input태그.getAttribute("value") -->
+이름 입력 : <input type="text" id=name><br>
+성별 : 
+<input type="radio" id=gender1 name=gender value="남자"> 남
+<input type="radio" id=gender2 name=gender value="여자"> 여<br>
+관심사항 : 
+<input type="checkbox" id=subject1 name=subject value="web"> web
+<input type="checkbox" id=subject2 name=subject value="web"> jsp
+<input type="checkbox" id=subject3 name=subject value="web"> spring
+<input type="checkbox" id=subject4 name=subject value="web"> android
+
+<input type="submit" value="회원가입">
+
+</form>
+<script type="text/javascript">
+	var btn = document.getElementById("pwcheck");
+	btn.onclick = function() {
+		var pw1c = document.getElementById("pw1");
+		var pw2c = document.getElementById("pw2");
+		
+		var a1 = pw1c.value; //var a1 = pw1c.getAttribute("value");
+		var a2 = pw2c.value; //var a2 = pw2c.getAttribute("value");
+		
+		if(a1 == a2) {
+			document.write("암호가 확인되었습니다.");
+			
+		} else document.write("암호를 확인하세요.");
+		
+	}
+
+
+</script>
+</body>
+</html>

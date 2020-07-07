@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	document.write("<h1>자바스크립트<br>프로그래밍</h1>");
+
+
+
+</script>
+</head>
+<body>
+<script type="text/javascript">
+// 1. 출력문장
+	document.write("<h1>body자바스크립트<br>프로그래밍</h1>");
+// 2. 입력문장 : html input -> 자바스크립트로써는 별로 쓸모 없다.
+// 3. 변수 : 논리값, 정수 실수 (숫자타입) , 문자, 배열, 함수
+	var i ; //   int == var 자바스크립트는 정수와 실수를 구분짓지 않는다.
+	i = "javascript"; //타입 문자열로 결정
+	i = 100; // 숫자타입으로 변경
+	i = true;
+	i = 'a';
+	i = 100/3; //자바스크립트는 기본적으로 정수값을 받아도 실수값을 내보낼 수 있다.
+	i = parseInt(214/11); //자동형변환기능(int)100/3 이런형태가 없는 대신 parseInt로 변환가능하다.
+	
+	document.write("<h1>" + i + "</h1>"); //i의 값 확인
+	document.write("<h1>" + typeof i + "</h1>"); //i의 타입 확인
+
+// 자바스크립트는 변수 var가 모든 타입을 받을 수 있다. 그리고 ('', "") 둘다 상관하지 않는다.
+
+	
+	var ar = new Array(); // 1. Array 내장객체 이용한 배열 선언 . 문법이 유연하지만 흐믈흐믈거려서 나중에는 헷갈린다.
+	ar.push(100); //ar[0] = 100;
+	//ar[0] = 190;
+	ar.push(3.14);
+	ar.push("html");
+	document.write("<h1>ar배열의 길이 = " + ar.length + "</h1>");
+	document.write("<h1>ar배열의 내용 = " + ar.join('<br>') + "</h1>");
+	 										// join : ar의 내용 출력 괄호 안의 값은 값들 사이사이에 넣을 문자나 숫자가 된다
+	
+	var ar2 = []; // 2. 배열표현식
+	ar2[0] = "자바";
+	ar2[1] = 3.14;
+	document.write("<h1>ar2배열의 길이 = " + ar2.length + "</h1>");
+
+//   방법1. 1. 함수정의, 호출 , 실행
+	function f1(){ //자바 메소드나 자바스크립트 함수 (문장집합, 매개변수, 실행결과) 정의
+		
+		document.write("<h1> f1함수 </h1>");
+		return 100;
+	
+	} //정의한 후에 호출을 해야 실행이 된다. f1();
+	
+	var result = f1(/*매개변수자리*/); //return값이 선언되지 않으면 아래 result값을 출력할때 undefined로 나온다.
+	document.write("<h1>" + result + "</h1>");
+	
+	var j;
+	document.write("<h1>" + j + "</h1>");
+
+//	방법2. 함수이름 없이 정의. 호출, 실행
+	var f2 = function (/*매개변수자리*/){ 		
+		document.write("<h1> 함수 </h>");
+	} 
+	f2();
+	
+	(function (/*매개변수자리*/){ 		
+		document.write("<h1> 함수3 </h>");
+	})();  //한번만 사용할 때 사용되는 방법
+	
+//	setTimeout(/*시간 경과한 후에 기능[EX> P태그 색상 빨강], h태그 색 파랑 ,*/function(){document.write("5초 지났습니다!")},5000/*시간*/); // 1/1000초 단위 : 5000 = 5초 
+	// 위처럼 function 함수를 넣어서 여러가지 기능을 짧게 할수 있다.	
+//	setInterval(function(){document.write("5초 지나뜹니다.")}, 5000);
+	// 설정 시간만다 반복해서 실행되는 함수
+	
+	var v1 = 100;
+	var v2 = "100";
+	// =, ==, === 연산자 : 타입과 무관하게 값 동일 비교 가능
+	if(v1 == v2) {
+		document.write("값만 같다!!");
+	}
+	
+	// === 연산자 : 타입, 값 동일한지 비교
+	if(v1 === v2) {
+		document.write("타입과 값이 모두 같다!!");
+	}
+	
+	
+</script>
+
+</body>
+</html>
+
+
+<!-- sql, html : 대소문자 구분 없다 
+	java, javascript, css : 대소문자 구분-->

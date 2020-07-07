@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link type=text/css rel="stylesheet" href="a.css">
+
+	
+<style type="text/css">
+
+/* .two {color: green;}
+ #third {color: blue;}	
+
+/* h1 바로 밑에 포함    h1> a {color: orange;} -- 자식태그 선택*/
+/* body 태그 포함 모든 a에 대한 컬러      body a{color: pink;} -- 후손태그 선택*/
+/* h1과 p 태그에 컬러 적용           h1 , p {color: yellow;} */
+/*input[type^=t]/*[태그속성=태그값]  ,  [태그속성^=태그값 이니셜] {color: teal;} */
+/*input[type$=t]{color:fuchsia;} [태그속성$=태그이니셜] : 태그값 끝에 t가 있는 것만 */
+input[type*=e]{color: #123456;}/* [태그속성*=이니셜] : 태그값중에 e가 포함되는 것만 */
+h1 {
+	color: red;
+	background-color: yellow;
+	border-color: blue;
+	text-align: center;
+	text-decoration: underline;
+	text-shadow: 5px 5px 5px #ff0000;
+	
+}
+#third{
+/*	font-size: 2.0em /*200% == 2.0em body태그의 다른 값의 두배*/;
+/*	font-family: sans-serif; /* 글꼴변경  serif=텍스트에 끝에 삦침자 , san=삦침자 제한*/
+/*  font-style: italic;
+	font-weight: bold; */
+	
+	font : italic bold 50px serif /*글의 스타일 먼저 써라*/ 
+}
+img {/*html5.png 설정*/
+	background-color: pink; /*img 파일은 배경색을 지정해도 적용이 안된다*/
+	width: 300px;
+	height: 300px;
+}
+
+h2 {
+	background-color: pink;
+	width: 300px;
+	height: 300px;
+
+}
+table {
+
+/*	border-color: blue;
+	border-width: 5px;
+	border-style: solid;  */
+	
+	border : solid 5px blue; /* 위의 border관련 세줄을 한줄로 정리 할 수 있다*/
+	width: 300px;
+	margin: auto; /*위 */ 
+}
+td {
+	border: solid 5px red;
+	text-align: center; /* 위 아래 오른쪽 왼쪽*/
+}
+</style>
+
+</head>
+<body>
+<img src="images/html5.png">
+<h2> 크기css 테스트</h2>
+
+<h1> 제목 </h1>
+
+<!-- <p style="color: blue;"> 문단1</p>
+	<p style="color: blue;"> 문단2</p> 
+
+>> 인라인방식
+-->
+
+<p class="two"> 문단1</p>
+<p> 문단2</p>
+<h1> <a href="a.html"> a.html 링크이동 </a></h1>
+<a href="b.html"> b.html 링크이동 </a></h1><br>
+
+<p id="third"> 문단3 </p>    <!-- id 지정은 이렇게 여러개 중복하지 않는 것을 권장한다 나중에 a나 링크 걸때 중복되면 실행이 안될수 있다 -->
+<p class="two"> 문단4 </p>
+<h1>제목2</h1>
+<form action="a.jsp">
+	<input type="text" name="id" value="아이디입력">
+	<input type="password" name="pw" value="암호입력">
+	<input type="submit" value="전송버튼"> 
+	<input type="reset" value="취소버튼"> 
+</form>
+
+<table>
+	<tr><td>1행1열</td><td>1행2열</td></tr>
+	<tr><td>2행1열</td><td>2행2열</td></tr>
+	<tr><td>3행1열</td><td>3행2열</td></tr>
+	
+
+</table>
+<!-- 테이블 설정 값 가운데 정렬 글씨 파랑 -->
+
+
+
+
+</body>
+</html>

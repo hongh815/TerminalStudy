@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+p {color: blue; font-size: 20px;}
+</style>
+
+</head>
+<body>
+<p id="target">테스트 문단입니다</p>
+<input id="col" type="button" value="색상변경">
+
+<script type="text/javascript">
+// p태그의 글씨 색상을 빨강으로 바꿔본다.
+// 1. 자바스크립트 html태그 -- 자바스크립트 변수 형태 변경
+/*
+ setTimeout(function() {
+	var ptag = document.getElementById("target"); //id = target 인 태그 불러오는 법
+	ptag.setAttribute("style", "color:red");
+	// 태그=element , 속성=attribute
+	}, 1000); //1초 후에 글씨가 빨강으로 바뀐다/
+*/
+
+// p태그 글씨색상을 파랑에서 생상변경버튼 클릭시 빨강으로 변경
+var btn = document.getElementById("col");
+var ptag = document.getElementById("target");
+// btn 클릭시  ptag의 style coler:red 로 변경
+btn.onclick = function(){
+	ptag.setAttribute("style", "color:green");
+	ptag.style = "color:red";  //위와 같은 결과를 낸다.
+//	ptag.removeAttribute("style"); 스타일태그를 지우는 것
+	//onclick : 마우스로 클릭 , onkeyup : 키보드로 클릭
+}
+
+// 키보드 입력이나 마우스 클릭시 사용자 이벤트 발생한다. - 이벤트 후속 동작 구현 함수
+// xxxx.onclick = function() {}
+/* xxxx.onkeyup(키를 누르고 때는 순간 발동) 
+ *, onkeypress(키를 누르고 있을때 발동) , onkeydown(키를 누르는 순간 발동) = function() {}
+ */ 
+	
+</script>
+</body>
+</html>
