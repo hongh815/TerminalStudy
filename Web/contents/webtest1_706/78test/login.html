@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="Login.jsp" method="post"> 
+<!-- get방식은 DEFAULT값이다  post방식은 url에 id와 pw가 보이지 않게 된다-->
+<h1>로그인 화면</h1>
+	아이디 : <input type="text" name=id><br> 
+<!-- id와 name 모두 태그에 들어갈 수 있다. id == 자바스크립트에서 활용. name == form에서 인식하는 이름 -->
+	암호 : <input type="password" name=pw><br>
+	좋아하는 동물 : 
+	<input type="checkbox" name="pet" value="고양이"> 고양이
+	<input type="checkbox" name="pet" value="강아지"> 강아지
+	<input type="checkbox" name="pet" value="기니기니"> 기니피그
+<!-- url : login.jsp?id=xxxx&pw=xxxx&pet=cat&pet=dog&pet=pig -->
+	<input type="submit" value="로그인버튼">
+
+</form>
+	
+	
+<a href="request.jsp">요청정보출력</a>
+</body>
+</html>
